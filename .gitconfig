@@ -1,0 +1,23 @@
+[core]
+  excludesfile = ~/.gitignore_global
+[mergetool]
+  keepBackup = false
+[color]
+  ui = true
+  diff = true
+  grep = true
+  branch = true
+  showbranch = true
+  status = true
+[format]
+  pretty = oneline
+[color "diff"]
+  plain = normal dim
+  frag = blue bold
+  whitespace = red reverse
+[color "status"]
+  header = normal dim
+  added = yellow
+  untracked = magenta
+[color "branch"]
+  current = yellow reverse
