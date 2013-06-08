@@ -2,11 +2,15 @@
 html=.html.erb,.html.haml,.haml
 --type-add
 css=.sass,.less,.scss
-
+--type-set
+cmake=CMakeLists.txt,.cmake
+--type-set
+clojure=.clj
+--type-add
+cc=.c,.h,.xs
 --type-set
 ignorables=.log,.tmp,.pdf
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
---ignore-dir=coverage
