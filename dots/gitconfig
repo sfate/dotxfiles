@@ -1,4 +1,9 @@
+[user]
+  name = Alexey Bobyrev
+  email = alexey.bobyrev@gmail.com
 [core]
+  editor = vim
+  pager = less -r
   excludesfile = ~/.gitignore_global
 [mergetool]
   keepBackup = false
