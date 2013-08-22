@@ -41,7 +41,7 @@ def install_dot_with_dir(dir)
       end
     end
   else
-    FileUtis.mkdir_p(target)
+    FileUtils.mkdir_p(target)
   end
   dots.each do |file|
     target_file = File.join(target, file)
