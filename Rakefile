@@ -1,16 +1,18 @@
 require 'rake'
 require 'fileutils'
 
-task :default => :install_dots
+task :default => 'dots:install'
 
 desc "Install all dotfiles into '~/'"
-task :install_dots do
-  puts "==\nInstalling dotfile into $HOME directory:"
-  Dir['dots/*'].each do |file|
-    puts "  * #{file}"
-    file.include?('moc') ? install_dot_with_dir(file) : install_dot(file)
+namespace :dots do
+  task :install do
+    puts "==\nInstalling dotfile into $HOME directory:"
+    Dir['dots/*'].each do |file|
+      puts "  * #{file}"
+      file.include?('moc') ? install_dot_with_dir(file) : install_dot(file)
+    end
+    puts "All done. See Ya!\n=="
   end
-  puts "All done. See Ya!\n=="
 end
 
 def install_dot(file)

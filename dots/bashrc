@@ -54,5 +54,5 @@ PS2=$BRed"..> "$Color_Off
 
 alias tmux="tmux -2"
 
-$rvm_path="/usr/local/rvm/scripts/rvm"
-[ -n $rvm_path ] && . $rvm_path
+PATH=$PATH:"$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -z $TMUX ]] && exec $(which tmux) -2
