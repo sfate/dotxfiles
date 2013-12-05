@@ -8,22 +8,28 @@
 # $6 file duration in XX:YY form
 # $7 file duration, number of seconds
 
-#get album cover from last.fm
-api_key='8268a36df9e8ca5f3bf2dac06f83ef93'
-artist="`echo "$1" | sed -e 's/ /+/g'`"
-album="`echo "$2" | sed -e 's/ /+/g'`"
-cover="/var/spool/lastfm/cover.gif"
-album_url="http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=$api_key&artist=$artist&album=$album"
-cover_url=`wget -qO- $album_url | cat | sed -n  -e 's/<image size=\"large\">//p' | sed -n  -e 's/<\/image>//p'`
-wget -q --output-document=$cover $cover_url
+track_dir=$(dirname "$3")
+cover_file=$(find "$track_dir" -name '*.jpg' | head -n1)
+if [[ -f $cover_file ]]; then
+  cover="$cover_file"
+else
+  #get album cover from last.fm
+  cover="/var/spool/lastfm/cover.gif"
+  api_key='8268a36df9e8ca5f3bf2dac06f83ef93'
+  artist="`echo "$1" | sed -e 's/ /+/g'`"
+  album="`echo "$2" | sed -e 's/ /+/g'`"
+  album_url="http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=$api_key&artist=$artist&album=$album"
+  cover_url=`wget -qO- $album_url | cat | sed -n  -e 's/<image size=\"large\">//p' | sed -n  -e 's/<\/image>//p'`
+  wget -q --output-document=$cover $cover_url
 
-#display osd-notify about track with cover ^_^
-if [ ! -f $cover ]
-then
-cover_url="http://cdn.last.fm/depth/catalogue/noimage/cover_med.gif"
-wget -q --output-document=$cover $cover_url
+  #display osd-notify about track with cover ^_^
+  if [ ! -f $cover ]; then
+    cover_url="http://cdn.last.fm/depth/catalogue/noimage/cover_med.gif"
+    wget -q --output-document=$cover $cover_url
+  fi
+  [[ ! -f $cover ]] && cover="$HOME/Downloads/Dropbox/beaver/images/381_show.jpg"
 fi
-/usr/bin/notify-send "$1 - $4 [$6]" "$2" -i $cover
+/usr/bin/notify-send "$1 - $4 [$6]" "$2" -i "$cover"
 
 #submit track to last.fm
 /usr/lib/lastfmsubmitd/lastfmsubmit --artist "$1" --title "$4" --length "$6" --album "$2"
