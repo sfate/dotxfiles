@@ -50,8 +50,6 @@ TagsCacheSize		= 256
 FollowPlayedFile	= yes
 CanStartInPlaylist	= yes
 
-ExecCommand1 = "mid3iconv -e CP1251 --remove-v1 %f"
-ExecCommand8 = "mv %f ~/.trash/"
+Keymap = keymap
 
-OnSongChange = "~/bin/mocp-next-song %a %r %f %t %n %d %D"
-
+OnSongChange = "mocp-next-song %a %r %f %t %n %d %D"
