@@ -53,6 +53,8 @@ PROMPT_COMMAND='PS1="$user_color\u$Color_Off[$ICyan\@$Color_Off]$BYellow\h:$BCya
 PS2=$BRed"..> "$Color_Off
 
 alias tmux="tmux -2"
+alias ll="ls -l"
 
 PATH=$PATH:"$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -z $TMUX ]] && exec $(which tmux) -2
+export LC_ALL=en_US.UTF-8
