@@ -18,7 +18,7 @@ function set_progress() {
 echo
 echo "Start dotfiles deploy:"
 cd $HOME
-(git clone https://github.com/sfate/dotZ.git) > /dev/null 2>&1
+(git clone https://github.com/sfate/dotZ.git dotZ --quiet) > /dev/null 2>&1
 FILES=($HOME/dotZ/dots/*)
 length=$((100/${#FILES[@]}))
 iter=0
