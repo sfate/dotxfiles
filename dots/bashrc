@@ -54,12 +54,25 @@ function parse_git_branch {
   echo -e "(git: $git_color$git_branch$Color_Off)"
 }
 
-PROMPT_COMMAND='PS1="$user_color\u$Color_Off$BYellow::(^_^)::$Color_Off$BCyan$(pwd -P)$Color_Off $(parse_git_branch)\n~ \$ $Color_Off"'
+function ps1_prompt {
+  PS1L="$user_color\u$Color_Off$BYellow::(^_^)::$Color_Off$BCyan$(pwd -P)$Color_Off $(parse_git_branch)$Color_Off"
+  PS1R="[ $(date +%H:%M) ]"
+  PS1=$(printf "%*s\r%s\n~ \$ " "$(tput cols)" "$PS1R" "$PS1L")
+}
+
+PROMPT_COMMAND=ps1_prompt
+
 PS2=$BRed"..> "$Color_Off
 
 alias tmux="tmux -2"
-alias ll="ls -l"
+alias ll="ls -lAh"
+alias ctags="`brew --prefix`/bin/ctags"
 
-PATH=$PATH:"$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -z $TMUX ]] && exec $(which tmux) -2
 export LC_ALL=en_US.UTF-8
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+
+export PATH="$HOME/bin:$PATH"
