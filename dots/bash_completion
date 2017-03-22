@@ -1673,8 +1673,6 @@ fi
 unset i
 
 # source user completion file
-[[ $BASH_COMPLETION != ~/.bash_completion && -r ~/.bash_completion ]] \
-    && . ~/.bash_completion
 unset -f have
 unset UNAME USERLAND have
 
