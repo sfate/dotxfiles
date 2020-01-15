@@ -14,4 +14,4 @@ All deployed versions and old configurations are stored at `~/.xfiles`.
 * [tmux](https://github.com/sfate/dotxfiles/blob/master/dots/tmux.conf) (1.7+)
 * Ruby (2.0+)
 
-### Version 0.1.9 (03 Mar 2017)
+### Last Edit: 15/Jan/2020

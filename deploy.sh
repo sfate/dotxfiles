@@ -1,6 +1,6 @@
 # Maintainer: https://github.com/sfate
 # Source: https://github.com/sfate/dotxfiles
-# Version: 0.1.9 - 03 Mar 2017
+# Last Edit: 15/Jan/2020
 #
 # How_to_Install_or_Update:
 #    !NOTE: This will override your existing setup
