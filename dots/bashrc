@@ -34,6 +34,7 @@ BYellow="\[\e[1;33m\]"      # Yellow
 BCyan="\[\e[1;36m\]"        # Cyan
 IOrange="\[\e[38;05;208m\]" # Orange
 
+
 if [ $(whoami) != 'root' ]; then
   user_color=$IOrange
 else
@@ -72,6 +73,8 @@ export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+export PATH="$HOME/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-export PATH="$HOME/.bin:$PATH"
+eval "$(direnv hook bash)"
