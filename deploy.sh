@@ -42,7 +42,7 @@ fi
 for f in ${FILES[@]}; do
   home_dot_file="$HOME/.$(basename $f)"
   
-  if [ - e "$home_dot_file" ]; then
+  if [ -e "$home_dot_file" ]; then
     mv home_dot_file "$current_backup_dir/$(basename $f)"
   else
     echo "  > No '$home_dot_file' folder found. Skipping..."
