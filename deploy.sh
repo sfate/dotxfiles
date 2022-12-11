@@ -26,10 +26,27 @@ FILES=($current_release_dir/dots/*)
 echo "[*] Old configuration backup"
 (mkdir -p $config_dir/{backup,releases}/$release_name)
 (mkdir -p $current_backup_dir/dots)
-(mv $HOME/.bin $current_backup_dir)
-(mv $HOME/.osx $current_backup_dir)
+
+if [ -e "$HOME/.bin" ]; then
+  (mv $HOME/.bin $current_backup_dir)
+else
+  echo '  > No ".bin" folder found. Skipping...'
+fi
+
+if [ -e "$HOME/.osx" ]; then
+  (mv $HOME/.osx $current_backup_dir)
+else
+  echo '  > No ".osx" folder found. Skipping...'
+fi
+
 for f in ${FILES[@]}; do
-  mv "$f" "$current_backup_dir/$(basename $f)"
+  home_dot_file="$HOME/.$(basename $f)"
+  
+  if [ -e "$home_dot_file" ]; then
+    mv "$home_dot_file" "$current_backup_dir/$(basename $f)"
+  else
+    echo "  > No '$home_dot_file' folder found. Skipping..."
+  fi
 done
 
 echo "[*] Link folders"
