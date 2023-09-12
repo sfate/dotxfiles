@@ -1,13 +1,22 @@
-BASH_COMPLETION_PATH="$HOME/.bash_completion"
-BASHRC_PATH="$HOME/.bashrc"
+# Warning that bash is deprecated no more
+export BASH_SILENCE_DEPRECATION_WARNING=1
+# Use gruvbox as standard theme for previews
+export BAT_THEME=gruvbox-dark
+# Integrate brew
+export PATH=${HOME}/.brew/bin:${PATH}
+# Integrate local bins
+export PATH="$PATH:$HOME/.bin"
+# Load some conf if there is some
+[ -s "$HOME/.bashrc" ] && \. "$HOME/.bashrc"
+# Complete bash
+[ -f $(brew --prefix)/etc/bash_completion ] && \. $(brew --prefix)/etc/bash_completion
 
-if [ -n "$BASH_VERSION" ]; then
-  [ -f $BASHRC_PATH ] && . $BASHRC_PATH
-  [ -f $BASH_COMPLETION_PATH ] && . $BASH_COMPLETION_PATH
-fi
+# ruby versions (TODO: move to asdf)
+eval "$(rbenv init - bash)"
 
-export PATH="/usr/local/sbin:$PATH"
+# node versions (TODO: move to asdf)
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+# Integrate starship (replace PS1_PROMPT)
+eval "$(starship init bash)"

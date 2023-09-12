@@ -66,7 +66,8 @@ PS2=$BRed"..> "$Color_Off
 
 alias tmux="tmux -2"
 alias ll="ls -lAh"
-alias ctags="`brew --prefix`/bin/ctags"
+export PATH=${HOME}/.brew/bin:${PATH}
+# alias ctags="`brew --prefix`/bin/ctags"
 
 export LC_ALL=en_US.UTF-8
 
@@ -79,6 +80,9 @@ export PATH="$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"
 
 [[ -s "/Users/schwarzmagier/.gvm/scripts/gvm" ]] && source "/Users/schwarzmagier/.gvm/scripts/gvm"
+
+# Created by `pipx` on 2023-05-05 14:01:07
+export PATH="$PATH:/Users/schwarzmagier/.local/bin"

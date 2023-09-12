@@ -7,11 +7,3 @@
 
 ### Versions
 All deployed versions and old configurations are stored at `~/.xfiles`.
-
-## Requirements
-* Git (1.8+)
-* [Vim](https://github.com/sfate/dotvimmy) (8.0+)
-* [tmux](https://github.com/sfate/dotxfiles/blob/master/dots/tmux.conf) (1.7+)
-* Ruby (2.0+)
-
-### Last Edit: 15/Jan/2020

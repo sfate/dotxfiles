@@ -1,0 +1,127 @@
+add_newline = false
+scan_timeout = 50
+command_timeout = 600
+palette = 'gruvbox'
+format = '''
+[╭─](bold grey)$username[@](mustard)$directory$git_branch$git_status$golang$ruby$nodejs$fill$fill\($localip$cmd_duration$battery\)[─╮](bold grey)
+[└─>\($character\)](bold grey) '''
+
+[palettes.gruvbox]
+orange = '#f27e0d'
+grey = '#576056'
+mustard = '#b49e29'
+green = '#699c69'
+blue = '#83A498'
+darkgreen = '#99971b'
+darkyellow = '#d79921'
+darkblue = '#458588'
+pink = '#d2869b'
+red = '#cc241d'
+magenta = '#945e80'
+
+[fill]
+symbol = '─'
+style = 'bold grey'
+
+[package]
+disabled = true
+
+[username]
+format = "[$user]($style)"
+style_user = "bold orange"
+style_root = "bold red"
+show_always = true
+disabled = false
+
+[hostname]
+format = "[$hostname]($style)"
+style = "bold purple purple"
+trim_at = "-"
+ssh_only = false
+disabled = false
+
+[battery]
+format = '[$symbol$percentage]($style)'
+full_symbol = "🔋 "
+charging_symbol = "🔌 "
+discharging_symbol = "⚡ "
+unknown_symbol = "🚫 "
+empty_symbol = "☠️  "
+disabled = false
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 60
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[character]
+format = '$symbol'
+success_symbol = '[✔](bold green)'
+error_symbol = "[✗](bold red)"
+disabled = false
+
+[cmd_duration]
+min_time = 10
+format = " [$duration]($style) "
+disabled = false
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style)'
+truncation_length = 100
+truncate_to_repo = false
+disabled = false
+
+[line_break]
+disabled = true
+
+[git_branch]
+symbol = ' '
+format = '$symbol\(git: [$branch(:$remote_branch)]($style)'
+style = 'bold darkgreen'
+
+[git_status]
+style = "bold blue"
+format = '([\[$all_status$ahead_behind\]]($style))\)'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+disabled = false
+
+[python]
+symbol = " "
+format = '$symbol\[[py](bold pink) [$version]($style)\]'
+style = "bold darkblue"
+pyenv_version_name = false
+pyenv_prefix = "pyenv"
+disabled = true
+
+[golang]
+symbol = " "
+style = "bold darkblue"
+format = '$symbol\[[go](bold pink) [$version]($style)\]'
+disabled = false
+
+[ruby]
+symbol = " "
+style = "bold darkblue"
+format = '$symbol\[[rb](bold pink) [$version]($style)\]'
+disabled = false
+
+[nodejs]
+symbol = " "
+format = '$symbol\[[js](bold pink) [$version](bold darkblue)\]'
+disabled = false
+
+[localip]
+format = "[$localipv4]($style)"
+style = 'bold magenta'
+ssh_only = false
+disabled = false

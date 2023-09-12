@@ -2,7 +2,7 @@
   name = Oleksii Bobyriev
   email = alexey.bobyrev@gmail.com
 [core]
-  editor = nvim -u ~/.config/nvim/init-git.vim
+  editor = vim
   pager = less -R
   excludesfile = ~/.gitignore_global
 [mergetool]
@@ -26,10 +26,3 @@
   untracked = magenta
 [color "branch"]
   current = yellow reverse
-[delta]
-  line-numbers = true
-  plus-color = "#012800"
-  minus-color = "#340001"
-  syntax-theme = gruvbox
-[interactive]
-  diffFilter = delta --color-only

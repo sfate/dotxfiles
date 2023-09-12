@@ -25,6 +25,7 @@ dump
 .env
 .envrc
 .idea
+.vscode
 .DS_Store
 env_setup.log
 tmp/
