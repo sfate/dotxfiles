@@ -4,6 +4,12 @@
 chsh -s $(which zsh)
 ```
 
+### Set hostname
+
+```sh
+sudo scutil --set HostName "jesuscradle"
+```
+
 ### Install Xcode Command Line Tools
 
 ```sh
@@ -78,11 +84,11 @@ defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 ```
 
-#### Install nerd-fonts
+#### Install terminal fonts
 
 ```sh
 brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
+brew install --cask font-terminess-ttf-nerd-font font-hack-nerd-font
 ```
 
 #### Install others

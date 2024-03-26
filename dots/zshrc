@@ -144,3 +144,6 @@ alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /de
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Ignore ORIG_HEAD for completion
+zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'

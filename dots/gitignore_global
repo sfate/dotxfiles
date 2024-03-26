@@ -57,3 +57,6 @@ config/secrets.yml.key
 .vscode
 TAGS
 doc
+
+# asdf config
+.tool-versions
