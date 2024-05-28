@@ -87,13 +87,23 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 #### Install terminal fonts
 
 ```sh
-brew tap homebrew/cask-fonts
 brew install --cask font-terminess-ttf-nerd-font font-hack-nerd-font
 ```
 
 #### Install others
 
 ```sh
-brew install tig bat entr mkcert ripgrep the_silver_searcher nss eza
+brew install tig bat entr mkcert ripgrep the_silver_searcher nss eza tmux
 mkcert -install
 ```
+
+#### Configure tmux
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Press `prefix + I` (capital i, as in Install) to fetch the plugin.
+```
+
+#### Other configuration
+
+Profile (Preferences -> Profiles -> select relevant profile) and then turning off the display of marks (Terminal -> under "Shell Integration", turn off "Show mark indicators."
