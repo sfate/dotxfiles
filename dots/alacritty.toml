@@ -4,16 +4,29 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [window]
-decorations     = "none"
+decorations     = "Full"
 dynamic_padding = false
 dynamic_title   = true
 opacity         = 1.0
-startup_mode    = "Fullscreen"
+startup_mode    = "Windowed"
 title           = "In <username> We Trust"
+option_as_alt   = "Both"
 
 [window.padding]
 x = 0
 y = 0
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+  { key = "J",     mods = "Alt", chars = "\u001B[B" },
+  { key = "K",     mods = "Alt", chars = "\u001B[A" },
+  { key = "H",     mods = "Alt", chars = "\u001B[D" },
+  { key = "L",     mods = "Alt", chars = "\u001B[C" },
+  { key = "L",     mods = "Control", action = "ClearLogNotice" },
+  { key = "L",     mods = "Control", chars = "\f" },
+]
 
 [scrolling]
 history = 12000
