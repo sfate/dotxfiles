@@ -27,9 +27,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Load libpg (for pg usage) onto path
 export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 
-# load emacs conf
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
 # Load asdf
 source $(brew --prefix asdf)/libexec/asdf.sh
 
@@ -121,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# export LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
