@@ -121,7 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=C.UTF-8 LC_ALL=C.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -159,3 +159,8 @@ alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /de
 
 # Ignore ORIG_HEAD for completion
 zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
+
+# Sharable history only after pane close
+unsetopt inc_append_history
+unsetopt share_history
+export PATH="/Users/schwarzmagier/.brew/opt/libpq/bin:$PATH"
