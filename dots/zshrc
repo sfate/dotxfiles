@@ -140,7 +140,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias ls='eza'
+alias lss='eza'
 alias tmux="tmux -2"
 
 alias dir='dir --color=auto'
