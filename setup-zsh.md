@@ -26,7 +26,7 @@ export PATH="$HOME/.brew/bin:$HOME/.brew/sbin:$PATH"
 ### Install deps
 
 ```sh
-brew install coreutils curl git reattach-to-user-namespace asdf
+brew install coreutils curl git reattach-to-user-namespace asdf tmux bat nvim
 ```
 
 ### Install OhMyZsh!
