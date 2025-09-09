@@ -26,7 +26,36 @@ export PATH="$HOME/.brew/bin:$HOME/.brew/sbin:$PATH"
 ### Install deps
 
 ```sh
-brew install coreutils curl git reattach-to-user-namespace asdf tmux bat nvim
+brew install coreutils curl git reattach-to-user-namespace asdf tmux bat nvim fd
+```
+
+#### Install terminal fonts
+
+```sh
+brew install --cask font-terminess-ttf-nerd-font font-hack-nerd-font
+```
+
+#### Install others
+
+```sh
+brew install tig bat entr mkcert ripgrep the_silver_searcher nss eza tmux
+mkcert -install
+```
+
+#### Setup new ssh key
+
+```sh
+ssh-keygen -t ed25519 -C "alexey.bobyrev@gmail.com"
+```
+
+Follow steps to tie GH profile with new ssh key:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+#### Configure tmux
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Press `prefix + I` (capital i, as in Install) to fetch the plugin.
 ```
 
 ### Install OhMyZsh!
@@ -54,7 +83,6 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby 3.3.0
 ```
 
-
 #### Add dotfiles conf
 
 ```sh
@@ -67,41 +95,11 @@ curl -sLo- https://git.io/dotxfiles-deploy.sh | bash
 curl -sLo- https://git.io/dotvimmy-deploy.sh | bash
 ```
 
-#### Setup new ssh key
-
-```sh
-ssh-keygen -t ed25519 -C "alexey.bobyrev@gmail.com"
-```
-
-Follow steps to tie GH profile with new ssh key:
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh
-
-
 #### Set fast keyrepeats
 
 ```sh
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
-```
-
-#### Install terminal fonts
-
-```sh
-brew install --cask font-terminess-ttf-nerd-font font-hack-nerd-font
-```
-
-#### Install others
-
-```sh
-brew install tig bat entr mkcert ripgrep the_silver_searcher nss eza tmux
-mkcert -install
-```
-
-#### Configure tmux
-
-```sh
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# Press `prefix + I` (capital i, as in Install) to fetch the plugin.
 ```
 
 #### Other configuration
