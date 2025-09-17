@@ -2,7 +2,7 @@
   name = Oleksii Bobyriev
   email = alexey.bobyrev@gmail.com
 [core]
-  editor = vim
+  editor = nvim
   pager = less -R
   excludesfile = ~/.gitignore_global
 [mergetool]
