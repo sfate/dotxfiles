@@ -26,3 +26,5 @@
   untracked = magenta
 [color "branch"]
   current = yellow reverse
+[init]
+	defaultBranch = main

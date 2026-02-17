@@ -19,6 +19,9 @@ export PATH="$HOME/.brew/opt/grep/libexec/gnubin/:$PATH"
 # Load libpg (for pg usage) onto path
 export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 
+# Load local bin
+export PATH="$HOME/.local/bin/:$PATH"
+
 # Use UTF-8
 export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8
@@ -109,7 +112,7 @@ source $P10K_THEME
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git asdf)
+plugins=(asdf wtree)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -160,3 +163,8 @@ zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
 # Sharable history only after pane close
 unsetopt inc_append_history
 unsetopt share_history
+
+_worktree_env_file="$PWD/.wtree_env"
+if [ -f "$_worktree_env_file" ]; then
+  source "$_worktree_env_file"
+fi

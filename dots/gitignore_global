@@ -60,3 +60,6 @@ doc
 
 # asdf config
 .tool-versions
+
+# custom worktree files
+.wtree_env
