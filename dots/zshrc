@@ -52,6 +52,11 @@ source $P10K_THEME
 # eval dircolors
 [[ -f "$HOME/.dircolors" ]] && eval "$(dircolors "$HOME/.dircolors")"
 
+# eval wtree
+# eval "$(~/blackholesun/wtree/wtree --shell-init zsh)"
+export PATH="$(go env GOBIN):$PATH"
+eval "$(wtree --shell-init zsh)"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -112,7 +117,7 @@ source $P10K_THEME
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf wtree)
+plugins=(asdf)
 
 source $ZSH/oh-my-zsh.sh
 
