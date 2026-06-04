@@ -53,9 +53,15 @@ source $P10K_THEME
 [[ -f "$HOME/.dircolors" ]] && eval "$(dircolors "$HOME/.dircolors")"
 
 # eval wtree
-# eval "$(~/blackholesun/wtree/wtree --shell-init zsh)"
-export PATH="$(go env GOBIN):$PATH"
-eval "$(wtree --shell-init zsh)"
+WTREE_BIN="$HOME/.local/bin/wtree"
+if [[ -x "$WTREE_BIN" ]]; then
+  __wtree_init="$("$WTREE_BIN" --shell-init zsh 2>/dev/null)"
+  if [[ $? -eq 0 && -n "$__wtree_init" ]]; then
+    eval "$__wtree_init"
+  fi
+  unset __wtree_init
+fi
+unset WTREE_BIN
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
