@@ -64,3 +64,5 @@ doc
 # custom worktree files
 .wtree_env
 .wtree
+
+**/.claude/settings.local.json
