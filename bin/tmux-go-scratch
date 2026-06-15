@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+scratch_dir="$(mktemp -d "${TMPDIR:-/tmp}/go-scratch.XXXXXX")"
+trap 'rm -rf "$scratch_dir"' EXIT
+
+cd "$scratch_dir"
+
+cat > prog.go <<'GO'
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("hello")
+}
+GO
+
+nvim prog.go
