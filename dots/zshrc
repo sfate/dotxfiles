@@ -17,7 +17,7 @@ export PATH="$HOME/.brew/opt/coreutils/libexec/gnubin/:$PATH"
 export PATH="$HOME/.brew/opt/grep/libexec/gnubin/:$PATH"
 
 # Load libpg (for pg usage) onto path
-export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
+export PATH="$HOME/.brew/opt/libpq/bin:$PATH"
 
 # Load local bin
 export PATH="$HOME/.local/bin/:$PATH"
@@ -29,9 +29,6 @@ export LESSCHARSET=utf-8
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Load asdf
-source $(brew --prefix asdf)/libexec/asdf.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
