@@ -12,7 +12,7 @@ dynamic_title   = true
 opacity         = 1.0
 startup_mode    = "Windowed"
 title           = "In <username> We Trust"
-option_as_alt   = "Both"
+option_as_alt   = "OnlyRight"
 
 [window.padding]
 x = 0
