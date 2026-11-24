@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+selected_file="$(fzf)" || exit 0
+[[ -n "$selected_file" ]] || exit 0
+
+tmux new-window -c "$PWD" nvim -- "$selected_file"
