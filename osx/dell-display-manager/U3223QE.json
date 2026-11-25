@@ -1,0 +1,571 @@
+{
+  "AppSettings" : {
+    "Version" : "1.0"
+  },
+  "UserSettings" : {
+    "EACust_MRU" : [
+
+    ],
+    "Profiles" : [
+
+    ],
+    "Schedule" : {
+      "Schedule" : {
+        "isSync" : false,
+        "isOn" : false,
+        "schedule1" : {
+          "startTime" : "8:00 AM",
+          "brightness" : 99,
+          "contrast" : 100,
+          "luminance" : -1,
+          "presetName" : "Day",
+          "duration" : 60
+        },
+        "schedule2" : {
+          "startTime" : "5:00 PM",
+          "brightness" : 99,
+          "contrast" : 100,
+          "luminance" : -1,
+          "presetName" : "Night",
+          "duration" : 60
+        },
+        "maxLu" : -1
+      },
+      "SyncSchedule" : {
+        "BrMonitor" : {
+          "isSync" : false,
+          "isOn" : false,
+          "schedule1" : {
+            "startTime" : "8:00 AM",
+            "brightness" : -1,
+            "contrast" : -1,
+            "presetName" : "Day",
+            "duration" : -1
+          },
+          "schedule2" : {
+            "startTime" : "5:00 PM",
+            "brightness" : -1,
+            "contrast" : -1,
+            "presetName" : "Night",
+            "duration" : -1
+          }
+        },
+        "DefaultMonitor" : {
+          "isSync" : false,
+          "isOn" : false,
+          "schedule1" : {
+            "startTime" : "8:00 AM",
+            "luminance" : -1,
+            "presetName" : "Day",
+            "duration" : -1
+          },
+          "schedule2" : {
+            "startTime" : "5:00 PM",
+            "luminance" : -1,
+            "presetName" : "Night",
+            "duration" : -1
+          }
+        }
+      }
+    },
+    "Audio_Detect" : true,
+    "ColorManagement" : true,
+    "EASpan" : false,
+    "AllowTelemetry" : false,
+    "CustLayouts" : [
+
+    ],
+    "OTANextCheckTime" : "2026-11-17 15:42:27.594",
+    "Language" : 11,
+    "EnableFn" : true,
+    "EAWithoutGap" : true,
+    "OS" : "Mac",
+    "DisplayMatrix" : {
+      "Matrix_BrMonitor" : false
+    },
+    "OnScreenNotification" : true,
+    "Hotkeys" : [
+      {
+        "Keys" : [
+          262144,
+          131072,
+          2
+        ],
+        "Function" : 0
+      },
+      {
+        "Keys" : [
+          262144,
+          131072,
+          46
+        ],
+        "Function" : 1
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 2
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          123
+        ],
+        "Function" : 3
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          124
+        ],
+        "Function" : 4
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          126
+        ],
+        "Function" : 5
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          125
+        ],
+        "Function" : 6
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          32
+        ],
+        "Function" : 7
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          34
+        ],
+        "Function" : 8
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          38
+        ],
+        "Function" : 9
+      },
+      {
+        "Keys" : [
+          262144,
+          524288,
+          40
+        ],
+        "Function" : 10
+      }
+    ],
+    "AutoCheckUpdate" : true,
+    "AutoStart" : true,
+    "ColorSchemes" : 0,
+    "ColorManagementAutoApplyICM" : true,
+    "SnapEnable" : false,
+    "EACustLayoutStartIndex" : 1000,
+    "EAAppWindowSnap" : false,
+    "Version" : "1.0",
+    "ImportPermission" : true,
+    "AutoRestoreWindowLayout" : false,
+    "EAWithShiftKey" : false
+  },
+  "CameraSettings" : {
+    "CameraData" : [
+
+    ]
+  },
+  "MonitorSettings" : {
+    "Model" : "U3223QE",
+    "Version" : "1.0",
+    "Display" : {
+
+    },
+    "KVM" : {
+      "LastUsed" : 1,
+      "USB" : {
+        "PCs" : [
+
+        ],
+        "AutoSwitchUSB" : true,
+        "WizardRuned" : true
+      },
+      "Network" : {
+        "MultiDisplaysRecentClusters" : [
+
+        ]
+      }
+    },
+    "VCPs" : [
+      {
+        "Code" : 2,
+        "Value" : 1
+      },
+      {
+        "Code" : 4,
+        "Value" : 0
+      },
+      {
+        "Code" : 5,
+        "Value" : 0
+      },
+      {
+        "Code" : 8,
+        "Value" : 0
+      },
+      {
+        "Code" : 16,
+        "Value" : 100
+      },
+      {
+        "Code" : 18,
+        "Value" : 75
+      },
+      {
+        "Code" : 20,
+        "Value" : 5
+      },
+      {
+        "Code" : 22,
+        "Value" : 100
+      },
+      {
+        "Code" : 24,
+        "Value" : 100
+      },
+      {
+        "Code" : 26,
+        "Value" : 100
+      },
+      {
+        "Code" : 82,
+        "Value" : 96
+      },
+      {
+        "Code" : 96,
+        "Value" : 6939
+      },
+      {
+        "Code" : 170,
+        "Value" : 1
+      },
+      {
+        "Code" : 172,
+        "Value" : 2328
+      },
+      {
+        "Code" : 174,
+        "Value" : 6000
+      },
+      {
+        "Code" : 178,
+        "Value" : 1
+      },
+      {
+        "Code" : 182,
+        "Value" : 3
+      },
+      {
+        "Code" : 198,
+        "Value" : 17868
+      },
+      {
+        "Code" : 200,
+        "Value" : 5897
+      },
+      {
+        "Code" : 201,
+        "Value" : 16645
+      },
+      {
+        "Code" : 202,
+        "Value" : 2
+      },
+      {
+        "Code" : 204,
+        "Value" : 2
+      },
+      {
+        "Code" : 214,
+        "Value" : 1
+      },
+      {
+        "Code" : 220,
+        "Value" : 0
+      },
+      {
+        "Code" : 223,
+        "Value" : 513
+      },
+      {
+        "Code" : 224,
+        "Value" : 0
+      },
+      {
+        "Code" : 225,
+        "Value" : 0
+      },
+      {
+        "Code" : 226,
+        "Value" : 0
+      },
+      {
+        "Code" : 229,
+        "Value" : 0
+      },
+      {
+        "Code" : 231,
+        "Value" : 46
+      },
+      {
+        "Code" : 232,
+        "Value" : 15
+      },
+      {
+        "Code" : 233,
+        "Value" : 0
+      },
+      {
+        "Code" : 234,
+        "Value" : 64513
+      },
+      {
+        "Code" : 240,
+        "Value" : 0
+      },
+      {
+        "Code" : 239,
+        "Value" : 1
+      },
+      {
+        "Code" : 241,
+        "Value" : 16651
+      },
+      {
+        "Code" : 242,
+        "Value" : 0
+      },
+      {
+        "Code" : 253,
+        "Value" : 116
+      }
+    ],
+    "Hotkeys" : [
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 0
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 1
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 2
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 3
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 4
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 5
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 6
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 7
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 8
+      },
+      {
+        "Keys" : [
+          1048576,
+          34
+        ],
+        "Function" : 9
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 10
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 11
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 12
+      },
+      {
+        "Keys" : [
+          120
+        ],
+        "Function" : 13
+      },
+      {
+        "Keys" : [
+          122
+        ],
+        "Function" : 14
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 15
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 16
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 17
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 18
+      },
+      {
+        "Keys" : [
+
+        ],
+        "Function" : 19
+      }
+    ],
+    "EasyArrangement" : {
+      "Active_EA" : -1,
+      "EA_MRU" : [
+        40,
+        7,
+        0,
+        1,
+        2
+      ],
+      "ProfileSettings" : [
+
+      ]
+    },
+    "ColorPreset" : {
+      "AppInfos" : [
+        {
+          "ExeName" : "Safari.app",
+          "Name" : "Safari",
+          "Color" : 0,
+          "HDRColor" : false,
+          "Path" : "\/Applications\/Safari.app"
+        },
+        {
+          "ExeName" : "Terminal.app",
+          "Name" : "Terminal",
+          "Color" : 0,
+          "HDRColor" : false,
+          "Path" : "\/System\/Applications\/Utilities\/Terminal.app"
+        }
+      ],
+      "Auto" : false,
+      "ColorBinding" : [
+
+      ]
+    },
+    "Personalize" : {
+      "Launcher" : [
+        "Brightness \/ Contrast",
+        "Color",
+        "Display",
+        "Easy Arrange",
+        "Webcam",
+        "KVM"
+      ]
+    },
+    "OS" : "Mac",
+    "ServiceTag" : "80WRG34",
+    "Input" : {
+      "FavoriteHotkeyInput" : 27,
+      "FriendlyNames" : [
+        {
+          "Input" : 15,
+          "Name" : "cradle"
+        },
+        {
+          "Input" : 27,
+          "Name" : "right"
+        }
+      ],
+      "Toogle2InputHotkeys" : {
+        "Input2" : 15,
+        "Input1" : 27,
+        "Keys" : [
+          1048576,
+          34
+        ]
+      }
+    },
+    "DisplayInfo" : {
+      "Pixel_h" : 2880,
+      "RefreshRate" : 60,
+      "Resolution_h" : 1440,
+      "Pixel_w" : 5120,
+      "Resolution_w" : 2560,
+      "Orientation" : 0
+    },
+    "Others" : {
+      "PowerNapSwitch" : false,
+      "PowerNap" : 2
+    }
+  }
+}dfc1f323a1551092e06a679a60a4aa817595703674923a05c8f9bd9ba5eb7bff
