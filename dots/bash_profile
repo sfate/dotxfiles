@@ -4,8 +4,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export BAT_THEME=gruvbox-dark
 # Integrate brew
 export PATH=${HOME}/.brew/bin:${PATH}
-# Integrate local bins
-export PATH="$PATH:$HOME/.bin"
+# Integrate user-local binaries
+export PATH="$HOME/.local/bin:$PATH"
 # Load some conf if there is some
 [ -s "$HOME/.bashrc" ] && \. "$HOME/.bashrc"
 # Complete bash
