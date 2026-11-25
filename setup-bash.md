@@ -27,63 +27,37 @@ brew install coreutils curl git bash-completion reattach-to-user-namespace
 
 ```sh
 brew install asdf
-echo -e "\n. \"$(brew --prefix asdf)/libexec/asdf.sh\"" >> ~/.bashrc
-echo -e "\n. \"$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash\"" >> ~/.bashrc
 ```
 
-##### Install go and node
+The linked `dots/bashrc` initializes asdf and its Bash completion.
+
+##### Manage language runtimes
 
 ```sh
+asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin add rust
 asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-asdf install golang 1.20.12
-
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs 18.19.0
+asdf plugin update --all
 ```
 
-##### Upd asdf go env
+Choose runtime versions per machine. The local `upgrade-deps.sh` command reference shows the update flow: install and select user-level versions with `asdf install` and `asdf set -u`, set project versions with `asdf set`, then run `asdf reshim` and refresh project dependencies. It also records Ruby's Rust/YJIT and PostgreSQL/MySQL prerequisites. That file exits before its command section, so use it as a reference rather than running it.
 
-```sh
-# add to .bashrc
-# Update asdf go env
-go_path="$(asdf where golang)"
-if [[ -n "${go_path}" ]]; then
-  export GOPATH=$(asdf where golang)/packages
-  export GOROOT=$(asdf where golang)/go
-  export PATH="${PATH}:$(go env GOPATH)/bin"
-fi
-```
+##### Configure the Go environment
 
-#### Upd custom bash preloads
+The linked `dots/bashrc` sets `GOPATH`, `GOROOT`, and the Go binary path when an asdf Go version is available.
 
-```sh
-# add to .bashrc
-# add brew
-export PATH="$HOME/.brew/bin/:$PATH"
+#### Bash settings
 
-# Custom conf
-alias tmux="tmux -2"
-export LC_ALL=en_US.UTF-8
+The linked `dots/bashrc` contains the Bash aliases, Starship prompt, and other custom settings. Avoid appending duplicate settings to `.bashrc`.
 
-# Init starship
-eval "$(starship init bash)"
+#### Link dotfiles
 
-# Init dircolors
-# export LSCOLORS="Gxfxcxdxbxegedabagacad
-alias ls='ls -F -G'
-```
+Use the manual symlink commands in [readme.md](readme.md). The linked Bash profile adds `~/.local/bin` to `PATH` and loads `.bashrc`.
 
-#### Add dotfiles conf
+#### Neovim configuration
 
-```sh
-curl -sLo- https://git.io/dotxfiles-deploy.sh | bash
-```
-
-#### Add vim conf
-
-```sh
-curl -sLo- https://git.io/dotvimmy-deploy.sh | bash
-```
+Neovim configuration is maintained separately in [sfate/dotnvim](https://github.com/sfate/dotnvim).
 
 #### Setup new ssh key
 
